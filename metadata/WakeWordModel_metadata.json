@@ -1,0 +1,52 @@
+{
+  "name": "Wake Word Detection",
+  "description": "Identify the the phrase \"Ei Darwin\"",
+  "version": "v1",
+  "subgraph_metadata": [
+    {
+      "input_tensor_metadata": [
+        {
+          "name": "audio",
+          "description": "receives a audio mfcc with 1 minute of duration",
+          "content": {
+          },
+          "stats": {
+            "max": [
+              400.0
+            ],
+            "min": [
+              0.0
+            ]
+          }
+        }
+      ],
+      "output_tensor_metadata": [
+        {
+          "name": "probability",
+          "description": "Probabilities of the 0 and 1 labels respectively.",
+          "content": {
+            "content_properties_type": "FeatureProperties"
+          },
+          "stats": {
+            "max": [
+              1.0
+            ],
+            "min": [
+              0.0
+            ]
+          },
+          "associated_files": [
+            {
+              "name": "wake_word_labels.txt",
+              "description": "Labels for objects that the model can recognize.",
+              "type": "TENSOR_AXIS_LABELS"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "author": "Darwin don't care",
+  "license": "MIT",
+  "min_parser_version": "1.0.0"
+}
